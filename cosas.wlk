@@ -22,14 +22,21 @@ object Bumblebee {
         method {
             return peso
         }
+        
         method peligrosidad() = 1
-        }= 0
-        method peso(){
-            return cantidadDeLadrillos * 2
+        
+        method agregarArena(nuevaArena){
+            peso += nuevaArena
+        }
         }
     
     object paqueteDeLadrillos{
         var cantidadDeLadrillos = 0
+
+        method agregarLadrillo(nuevoLadrillo){
+            cantidadDeLadrillos += nuevoLadrillo
+        }
+
         method peso(){
             return cantidadDeLadrillos * 2
         }
@@ -37,3 +44,23 @@ object Bumblebee {
         method peligrosidad() = 2 
     }
 
+    object bateriaAntiaerea{
+        var = peso
+        var = peligrosidad
+        method peso()
+
+    }
+
+    object contenedorPortuario{
+        
+    }
+
+    object residuosRadioctivos{
+        var peso = 0 
+
+        method peso(){
+            return peso
+        }
+
+        method agrgarMaterialRadioactivo(nuevoMat)
+    }
