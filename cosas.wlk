@@ -8,7 +8,7 @@ object KnightRider {
 
 object Bumblebee {
     var esRobot = false
-    
+
     method peso() = 800
 
     method peligrosidad(){
@@ -68,7 +68,22 @@ object Bumblebee {
 
 
     object contenedorPortuario{
-        
+        const contenido = []
+
+        method agregarContenido(objeto){
+            contenido.add(objeto)
+        }
+
+        method peso() = 100 + contenido.sumaPeso()
+
+        method sumaPeso(){
+            contenido.sum({c=>c.peso()})
+        }
+
+        method maximoPeligrosidad() {
+            contenido.max({c=>c.peligrosidad()})
+        }
+        method peligrosidad() = if(self.peso()==0) 0 else contenido.maximoPeligrosidad()
     }
 
     object residuosRadioctivos{
@@ -86,5 +101,7 @@ object Bumblebee {
     }
 
     object embalajeDeSeguridad{
+
+        method 
 
     }
