@@ -101,7 +101,25 @@ object Bumblebee {
     }
 
     object embalajeDeSeguridad{
+            
+            var cosaEmbalada = unaCosa
 
-        method 
+        method objetoEnvalado(){
 
+            return cosaEmbalada
+
+        }
+
+        method embalarCosa(){
+            
+
+
+        }
+
+
+        method peligrosidad(){
+
+            
+
+        }
     }
