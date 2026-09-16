@@ -45,11 +45,17 @@ object Bumblebee {
     }
 
     object bateriaAntiaerea{
-        var = peso
-        var = peligrosidad
-        method peso()
-
+        var estaConMisiles = true
+        method peso(){
+            if (estaConMisiles){
+                return 300
+            }
+            else {
+                return 200
+            }
+        }
     }
+
 
     object contenedorPortuario{
         
@@ -62,5 +68,13 @@ object Bumblebee {
             return peso
         }
 
-        method agrgarMaterialRadioactivo(nuevoMat)
+        method agrgarMaterialRadioactivo(nuevoMaterial){
+            peso += nuevoMaterial
+        }
+
+        method peligrosidad = 200
+    }
+
+    object embalajeDeSeguridad{
+
     }
