@@ -7,13 +7,13 @@ object KnightRider {
 }
 
 object Bumblebee {
-    var estado = auto
+    var estaTransformado = false
     method peso() = 800
-    
-    method peligrosidad() = 15
+    method peligrosidad(){
+        return if (estaTransformado) 30 else 15
+    }
+    method transformar(){
 
-    method transformacion(estado){
-        
     }
     }
 
@@ -47,12 +47,17 @@ object Bumblebee {
     object bateriaAntiaerea{
         var estaConMisiles = true
         method peso(){
-            if (estaConMisiles){
-                return 300
-            }
-            else {
-                return 200
-            }
+            return if(estaConMisiles) 300 else 200
+        }
+        method peligrosidad(){
+            return if (estaConMisiles) 100 else 0
+        }
+
+        method ponerMisiles(){
+            estaConMisiles = true
+        }
+        method sacarMisiles(){
+            estaConMisiles = false
         }
     }
 
