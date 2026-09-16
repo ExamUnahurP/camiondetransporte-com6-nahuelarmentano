@@ -70,8 +70,8 @@ object Bumblebee {
     object contenedorPortuario{
         const contenido = []
 
-        method agregarContenido(objeto){
-            contenido.add(objeto)
+        method agregarContenido(cosa){
+            contenido.add(cosa)
         }
 
         method peso() = 100 + contenido.sumaPeso()
@@ -110,16 +110,18 @@ object Bumblebee {
 
         }
 
-        method embalarCosa(){
-            
+        method embalarCosa(cosa){
+            cosaEmbalada = cosa
+        }
+        
 
-
+        method peso(){
+            return cosaEmbalada.peso()
         }
 
-
         method peligrosidad(){
-
             
+            return cosaEmbalada.peligrosidad() / 2 
 
         }
     }
