@@ -1,3 +1,4 @@
+import cosas.*
 object camion {
 
     const carga = []
@@ -14,6 +15,7 @@ object camion {
     method cargaConPesopar(){
         return carga.any({c=>c.peso().even()})
     }
+    
     
 }
 

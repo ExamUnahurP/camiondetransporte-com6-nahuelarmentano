@@ -1,4 +1,4 @@
-object KnightRider {
+object knightRider {
    
     method peso() = 500
 
@@ -6,7 +6,7 @@ object KnightRider {
 
 }
 
-object Bumblebee {
+object bumblebee {
     var esRobot = false
 
     method peso() = 800
@@ -22,7 +22,7 @@ object Bumblebee {
     }
 }
 
-    object arenaAGranel{
+object arenaAGranel{
         var peso = 0
         method {
             return peso
@@ -35,7 +35,7 @@ object Bumblebee {
         }
         }
     
-    object paqueteDeLadrillos{
+object paqueteDeLadrillos{
         var cantidadDeLadrillos = 0
 
         method agregarLadrillo(nuevoLadrillo){
