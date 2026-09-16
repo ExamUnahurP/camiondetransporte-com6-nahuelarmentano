@@ -7,10 +7,33 @@ object KnightRider {
 }
 
 object Bumblebee {
-    var = auto
+    var estado = auto
     method peso() = 800
     
     method peligrosidad() = 15
 
-    method tranformacion()
-}
+    method transformacion(estado){
+        
+    }
+    }
+
+    object arenaAGranel{
+        var peso = 0
+        method {
+            return peso
+        }
+        method peligrosidad() = 1
+        }= 0
+        method peso(){
+            return cantidadDeLadrillos * 2
+        }
+    
+    object paqueteDeLadrillos{
+        var cantidadDeLadrillos = 0
+        method peso(){
+            return cantidadDeLadrillos * 2
+        }
+
+        method peligrosidad() = 2 
+    }
+
