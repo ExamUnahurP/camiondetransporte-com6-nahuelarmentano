@@ -7,15 +7,20 @@ object KnightRider {
 }
 
 object Bumblebee {
-    var estaTransformado = false
+    var esRobot = false
+    
     method peso() = 800
-    method peligrosidad(){
-        return if (estaTransformado) 30 else 15
-    }
-    method transformar(){
 
+    method peligrosidad(){
+        return if (esRobot) 30 else 15
     }
+    method transformarEnAuto(){
+        esRobot = false
     }
+    method transformarEnRobot(){
+        esRobot = true
+    }
+}
 
     object arenaAGranel{
         var peso = 0
