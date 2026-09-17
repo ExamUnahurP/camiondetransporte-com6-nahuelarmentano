@@ -23,17 +23,17 @@ object bumblebee {
 }
 
 object arenaAGranel{
-        var peso = 0
-        method {
-            return peso
-        }
+    var peso = 0
+    method {
+        return peso
+    }
         
-        method peligrosidad() = 1
+    method peligrosidad() = 1
         
-        method agregarArena(nuevaArena){
+    method agregarArena(nuevaArena){
             peso += nuevaArena
-        }
-        }
+    }
+}
     
 object paqueteDeLadrillos{
         var cantidadDeLadrillos = 0
@@ -46,10 +46,10 @@ object paqueteDeLadrillos{
             return cantidadDeLadrillos * 2
         }
 
-        method peligrosidad() = 2 
-    }
+        method peligrosidad() = 2  
+}
 
-    object bateriaAntiaerea{
+object bateriaAntiaerea{
         var estaConMisiles = true
         method peso(){
             return if(estaConMisiles) 300 else 200
@@ -64,10 +64,10 @@ object paqueteDeLadrillos{
         method sacarMisiles(){
             estaConMisiles = false
         }
-    }
+}
 
 
-    object contenedorPortuario{
+object contenedorPortuario{
         const contenido = []
 
         method agregarContenido(cosa){
@@ -84,44 +84,44 @@ object paqueteDeLadrillos{
             contenido.max({c=>c.peligrosidad()})
         }
         method peligrosidad() = if(self.peso()==0) 0 else contenido.maximoPeligrosidad()
+}
+
+object residuosRadioctivos{
+    var peso = 0 
+
+    method peso(){
+        return peso
     }
 
-    object residuosRadioctivos{
-        var peso = 0 
-
-        method peso(){
-            return peso
-        }
-
-        method agrgarMaterialRadioactivo(nuevoMaterial){
-            peso += nuevoMaterial
-        }
-
-        method peligrosidad = 200
+    method agrgarMaterialRadioactivo(nuevoMaterial){
+        peso += nuevoMaterial
     }
 
-    object embalajeDeSeguridad{
+    method peligrosidad = 200
+}
+
+object embalajeDeSeguridad{
             
-            var cosaEmbalada = unaCosa
+    var cosaEmbalada = unaCosa
 
-        method objetoEnvalado(){
+    method objetoEnvalado(){
 
-            return cosaEmbalada
+        return cosaEmbalada
 
-        }
+    }
 
-        method embalarCosa(cosa){
-            cosaEmbalada = cosa
-        }
+    method embalarCosa(cosa){
+        cosaEmbalada = cosa
+    }
         
 
-        method peso(){
-            return cosaEmbalada.peso()
-        }
-
-        method peligrosidad(){
-            
-            return cosaEmbalada.peligrosidad() / 2 
-
-        }
+    method peso(){
+        return cosaEmbalada.peso()
     }
+
+    method peligrosidad(){
+            
+        return cosaEmbalada.peligrosidad() / 2 
+
+    }
+}
