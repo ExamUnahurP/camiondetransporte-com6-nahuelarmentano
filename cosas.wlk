@@ -97,7 +97,7 @@ object residuosRadioctivos{
         peso += nuevoMaterial
     }
 
-    method peligrosidad = 200
+    method peligrosidad() = 200
 }
 
 object embalajeDeSeguridad{
