@@ -24,7 +24,7 @@ object bumblebee {
 
 object arenaAGranel{
     var peso = 0
-    method {
+    method peso(){
         return peso
     }
         
